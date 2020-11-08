@@ -1,5 +1,5 @@
-camelot_py==0.8.2
+
 pandas==1.0.1
 requests==2.22.0
 streamlit==0.70.0
-camelot==13.04.13-gpl-pyqt
+
