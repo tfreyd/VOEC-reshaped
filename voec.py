@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import requests
-import camelot
+#import camelot
 
 st.write('# VOEC list Reshaped')
 st.sidebar.write("""
