@@ -3,20 +3,16 @@ import pandas as pd
 import requests
 #import camelot
 
-st.write('# Foreign sellers registered in the VOEC scheme')
+st.title('Foreign sellers registered in the VOEC scheme')
 st.sidebar.write("""
 Info about [VAT On E-Commerce in Norway](https://www.skatteetaten.no/en/business-and-organisation/vat-and-duties/vat/foreign/e-commerce-voec/)
-The original list of the foreign sellers registered is just a PDF of >1000 rows. I wanted to create something more user friendly.
+The original list of the foreign sellers registered is just a PDF with 1000+ rows.I wanted to create something more user friendly.
 
-Date of the info: 15.10.20
+Source: [Skatteetaten](https://www.skatteetaten.no/globalassets/bedrift-og-organisasjon/voec/voec-registrerte-tilbydere-15.10.2020.pdf)
 
-Made by [Thibaud Freyd](https://www.linkedin.com/in/thibaud-freyd/)
-
-[Code](https://github.com/tfreyd/VOEC-reshaped)
+[Git Repository] (https://github.com/tfreyd/VOEC-reshaped)
 """)
-
-
-
+st.sidebar.write('** Author: [Thibaud Freyd](https://www.linkedin.com/in/thibaud-freyd/)**')
 #loading of the data
 df = pd.read_csv('list_complete.csv')
 #generation of the list of countries
@@ -28,7 +24,7 @@ country_selected=st.selectbox("Choose your country: ",countries,index=18)
 #
 df =df.loc[df['country']==country_selected]
 st.write(df)
-
+st.write('''*Info from 15.10.2020*''')
 #for version with sidebar
 # st.sidebar.header('User Input Parameters')
 # def user_input_features():
@@ -69,4 +65,13 @@ st.write(df)
 # if st.sidebar.button('Rebuild Database'):
 #     refresh_data()
 
-st.write('*Made by [Thibaud Freyd](https://www.linkedin.com/in/thibaud-freyd/)*')
+
+#in order to hide the Menu
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
