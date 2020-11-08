@@ -1,2 +1,2 @@
 # VOEC-reshaped
-Reshape of the list of VOEC into a more user friendly webapp in Python
+Reshape of the list of VOEC registered foreign sellers into a more user friendly webapp in Python
