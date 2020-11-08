@@ -11,8 +11,12 @@ The original list of the foreign sellers registered is just a PDF with 1000+ row
 Source: [Skatteetaten](https://www.skatteetaten.no/globalassets/bedrift-og-organisasjon/voec/voec-registrerte-tilbydere-15.10.2020.pdf)
 
 [Git Repository] (https://github.com/tfreyd/VOEC-reshaped)
+
+
 """)
-st.sidebar.write('** Author: [Thibaud Freyd](https://www.linkedin.com/in/thibaud-freyd/)**')
+st.sidebar.write('''** Author: [Thibaud Freyd](https://www.linkedin.com/in/thibaud-freyd/)**
+
+Version 1.0 - Durty but works :D ''')
 #loading of the data
 df = pd.read_csv('list_complete.csv')
 #generation of the list of countries
