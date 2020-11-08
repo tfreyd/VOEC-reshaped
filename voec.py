@@ -3,14 +3,16 @@ import pandas as pd
 import requests
 #import camelot
 
-st.write('# VOEC list Reshaped')
+st.write('# Foreign sellers registered in the VOEC scheme')
 st.sidebar.write("""
 Info about [VAT On E-Commerce in Norway](https://www.skatteetaten.no/en/business-and-organisation/vat-and-duties/vat/foreign/e-commerce-voec/)
-The original list of the registered foreign sellers is just a PDF of >1000 rows. I wanted to create something more user friendly.
+The original list of the foreign sellers registered is just a PDF of >1000 rows. I wanted to create something more user friendly.
 
 Date of the info: 15.10.20
 
 Made by [Thibaud Freyd](https://www.linkedin.com/in/thibaud-freyd/)
+
+[Code](https://github.com/tfreyd/VOEC-reshaped)
 """)
 
 
