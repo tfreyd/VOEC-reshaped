@@ -16,7 +16,7 @@ Source: [Skatteetaten](https://www.skatteetaten.no/globalassets/bedrift-og-organ
 """)
 st.sidebar.write('''** Author: [Thibaud Freyd](https://www.linkedin.com/in/thibaud-freyd/)**
 
-Version 1.0 - Durty but works :D ''')
+Version 1.0 ''')
 #loading of the data
 df = pd.read_csv('list_complete.csv')
 #generation of the list of countries
