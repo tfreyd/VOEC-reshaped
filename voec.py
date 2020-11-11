@@ -22,10 +22,12 @@ df = pd.read_csv('list_complete.csv')
 #generation of the list of countries
 countries = df['country'].unique().astype(str)
 countries = sorted(countries)
-#list for country selection
+
+# box for country selection
 country_selected=st.selectbox("Choose your country: ",countries,index=18)
+
+
 #df = user_input_features() #for version with sidebar
-#
 df =df.loc[df['country']==country_selected]
 st.write(df)
 st.write('''*Info from 15.10.2020*''')
