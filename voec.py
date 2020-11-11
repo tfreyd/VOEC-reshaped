@@ -6,7 +6,7 @@ import requests
 st.title('Foreign sellers registered in the VOEC scheme')
 st.sidebar.write("""
 Info about [VAT On E-Commerce in Norway](https://www.skatteetaten.no/en/business-and-organisation/vat-and-duties/vat/foreign/e-commerce-voec/)
-The original list of the foreign sellers registered is just a PDF with 1000+ rows.I wanted to create something more user friendly.
+The original list of the foreign sellers registered is just a PDF with 1000+ rows. I wanted to create something more user friendly.
 
 Source: [Skatteetaten](https://www.skatteetaten.no/globalassets/bedrift-og-organisasjon/voec/voec-registrerte-tilbydere-15.10.2020.pdf)
 
