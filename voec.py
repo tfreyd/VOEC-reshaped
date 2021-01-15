@@ -18,7 +18,7 @@ st.sidebar.write('''** Author: [Thibaud Freyd](https://www.linkedin.com/in/thiba
 
 st.sidebar.write('''Version 1.1
 
-*known issue*: need to refresh the page to reset everything ''')
+''')
 #loading of the data
 @st.cache
 def import_data():
@@ -74,6 +74,7 @@ if country_selection or company_selection:
 
 st.write('''*Database from 27.11.20*''')
 
+st.write("*known issue*: need to refresh the page to reset everything" )
 #df = user_input_features() #for version with sidebar
 #for version with sidebar
 # st.sidebar.header('User Input Parameters')
