@@ -41,6 +41,7 @@ country_selection=left_col_selection.selectbox("Country : ",list_countries,index
 if left_col_selection.button('Valid',key='country_button'):
     left_col_selection.write(f'{country_selection} selected')
     df =df.loc[df['country']==country_selection]
+    df=df.sort_values('company')
 
 #company selected
 company_selection=right_col_selection.selectbox("Company: ",list_companies)
