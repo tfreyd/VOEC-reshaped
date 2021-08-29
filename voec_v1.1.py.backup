@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import requests
-
+#import camelot
 
 st.title('Foreign sellers registered in the VOEC scheme')
 st.sidebar.write("""
@@ -22,12 +22,6 @@ st.sidebar.write('''Version 1.2
 #loading of the data
 @st.cache
 def import_data():
-
-    #downlaod the csv file fro internet
-    url_file='https://www.skatteetaten.no/globalassets/bedrift-og-organisasjon/voec/registrerte-tilbydere---liste/voec-registrerte-tilbydere-12.08.21.csv'
-    pdf_file=requests.get(url_file)
-    
-    #load csv
     df = pd.read_csv('./list_companies_extraction/list_complete.csv')
     df = df.sort_values('country')
     
@@ -45,7 +39,7 @@ def import_data():
 
 
 
-df, all_countries,all_companies =  import_data()
+df, all_countries,all_companies=  import_data()
 
 
 
@@ -58,25 +52,37 @@ index_company=0
 
 # box for country selection
 country_selection=left_col_selection.selectbox("Country : ",all_countries,index=0,format_func=lambda x: 'Select an option' if x == '' else x)
-
 #box for company selection
 company_selection = right_col_selection.selectbox("Company: ", all_companies,index=index_company,format_func=lambda x: 'Select an option' if x == '' else x)
 
 
+#button country selection
+# if left_col_selection.button('Valid',key='country_button'):
+#     left_col_selection.write(f'{country_selection} selected')
+#     df =df.loc[df['country']==country_selection]
+#     df=df.sort_values('company') 
+#     st.write(df)
 
-#display result of the search
 if country_selection or company_selection:
     if country_selection:
-        #st.success(f' "{country_selection}" selected')
+        st.success(f' "{country_selection}" selected')
         st.write(df.loc[df['country']==country_selection])
     if company_selection:
-        #st.success(f' "{company_selection}" selected')
+        st.success(f' "{company_selection}" selected')
         st.write(df.loc[df['company']==company_selection])
 
 
-st.write('''*Database from 12.08.21*''')
+st.write('''*Database from 27.11.20*''')
 
 st.write("*known issue*: need to refresh the page to reset everything" )
+#df = user_input_features() #for version with sidebar
+#for version with sidebar
+# st.sidebar.header('User Input Parameters')
+# def user_input_features():
+#         country_selected=st.sidebar.selectbox("Choose your country: ",countries,index=18)
+#         data_to_display = df.loc[df['country']==country_selected]
+#         return data_to_display
+
 
 
 

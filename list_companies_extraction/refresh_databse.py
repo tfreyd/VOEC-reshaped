@@ -3,7 +3,7 @@ import requests
 import camelot 
 def refresh_data():
      #retrieve of the pdf and digestation as df
-     url_file='https://www.skatteetaten.no/globalassets/bedrift-og-organisasjon/voec/voec-registrerte-tilbydere-27.11.2020.pdf'
+     url_file='https://www.skatteetaten.no/globalassets/bedrift-og-organisasjon/voec/registrerte-tilbydere---liste/voec-registrerte-tilbydere-12.08.21.csv'
      pdf_file=requests.get(url_file)
     
      #save as pdf
