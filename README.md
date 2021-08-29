@@ -1,5 +1,5 @@
 # VOEC-reshaped
-Available at (link)[https://share.streamlit.io/tfreyd/voec-reshaped/main/voec.py]
+Available at [link](https://share.streamlit.io/tfreyd/voec-reshaped/main/voec.py)
 
 Reshape of the list of VOEC registered foreign sellers into a more user friendly webapp in Python
 
@@ -16,3 +16,7 @@ To Do:
 - make button to download list as pdf/excel......
 - figure:  number of  sellers per country on the main page
 - map with clickable country?
+
+V1.2: 
+The list is now available as a CSV file which is way easier to handle than digesting a PDF file!! 
+Update of the list of company with the lastest version of 12.08.21
